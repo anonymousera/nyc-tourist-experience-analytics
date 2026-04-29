@@ -1,0 +1,22 @@
+.DS_Store
+__MACOSX/
+
+# Java / Maven
+*.class
+target/
+dependency-reduced-pom.xml
+
+# Python
+__pycache__/
+*.pyc
+
+# Common output artifacts
+output/
+output_subset/
+part-*
+stats-r-00000
+filtered-r-00000
+
+# Local logs/temp
+*.log
+*.tmp
