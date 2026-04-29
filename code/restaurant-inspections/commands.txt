@@ -1,0 +1,44 @@
+
+
+This project depends on commons-csv-1.10.0.jar which should be present in the project directory
+
+Step 1: First go to Project Directory
+cd "project_dir"
+
+
+Step 2: Then, remove old class files
+rm -rf *.class
+rm -rf jar_test_dir
+
+
+Step 3: Get the third party dependency if not present
+wget https://repo1.maven.org/maven2/org/apache/commons/commons-csv/1.10.0/commons-csv-1.10.0.jar
+
+
+Step 4: Create class files
+javac -classpath ".:commons-csv-1.10.0.jar:`hadoop classpath`" *.java
+
+
+Step 5: Check class files
+ls -a *.class
+
+
+Step 6: Create JAR with all dependencies
+Reference: https://stackoverflow.com/questions/8453543/extracting-jar-file-with-command-line
+mkdir -p jar_test_dir
+cp *.class jar_test_dir/
+cd jar_test_dir
+jar xf ../commons-csv-1.10.0.jar
+cd ..
+jar cf nyc-inspection.jar -C jar_test_dir .
+rm -rf jar_test_dir
+
+
+Step 7: Run MapReduce Job
+hadoop jar nyc-inspection.jar NYCInspection /user/an4758_nyu_edu/NYC_Restaurent_Inscp_Data.csv /user/an4758_nyu_edu/part1_output
+
+Step 8: Check Output
+hadoop fs -ls
+
+# To check results
+hadoop fs -cat part1_output/part-r-00000 | head -20
