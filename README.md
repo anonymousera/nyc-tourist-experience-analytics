@@ -63,11 +63,5 @@ For each pipeline module, see folder-specific `README.md` files:
 - `hotel_codes/README.md`
 - `MTA_codes/README.md`
 - `nypd_arrest_codes/README.md`
-- `restaurant_inspection_codes/README.md`
-
-## Report and Deliverables
-
-- Final report PDF: `RBDA_Final_Project_Report.pdf`
-- LaTeX source and figures: `RBDA_Final_Project_Report_latex/`
-- Hive analytics queries: `group21_final_master.hql`, `group21_tourism_analysis.hql`, `group21_nightlife.hql`, `group21_pct_A.hql`
+- `restaurant_inspection_codes/README.md``
 
