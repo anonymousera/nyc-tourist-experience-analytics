@@ -1,4 +1,4 @@
-# NYC Tourist Experience Analytics (RBDA Final Project)
+# NYC Tourist Experience Analytics
 
 This project builds a neighborhood-level analytics framework to answer a practical question: **which NYC ZIP codes provide the strongest overall tourist experience, and why**.  
 We integrate hotel review quality, restaurant inspection quality, subway ridership, and NYPD arrest data into a unified ZIP-code model and analyze trade-offs across safety, mobility, dining, and lodging.
